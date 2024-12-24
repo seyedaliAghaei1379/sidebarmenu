@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/icon.css">
 </head>
 <body class="">
 <section class="flex relative flex-col w-full min-h-screen bg-red-100 px-4 py-4">
@@ -66,8 +67,27 @@
     </ul>
 </div>
 <!-- SIDEBAR END  -->
-
 <div id="overlay" class="inset-0 bg-black/30 fixed hidden" ></div>
+
+<div id="left-icons" class="z-[100] sidebar-left transition-all  fixed py-3 pl-0.5  h-[10vh] bottom-[260px] rounded-2xl  mx-4 lg:hidden text-xs">
+    <div class="w-full flex flex-col justify-center items-center gap-y-5 bg-white rounded-xl shadow-sm py-4 text-xl text-blue-950 px-4 ">
+        <a class=" grid place-items-center rounded-full shadow-sm cursor-pointer" href="#">
+            <i class="prk-eitaa"></i>
+        </a>
+        <a class=" grid place-items-center rounded-full shadow-sm cursor-pointer" href="#">
+            <i class="prk-bale"></i>
+        </a>
+        <a class=" grid place-items-center rounded-full shadow-sm cursor-pointer" href="#">
+            <i class="prk-soroush"></i>
+        </a>
+        <a class=" grid place-items-center rounded-full shadow-sm cursor-pointer" href="#">
+            <i class="prk-aparat"></i>
+        </a>
+        <a class=" grid place-items-center rounded-full shadow-sm cursor-pointer" href="#">
+            <i class="prk-gap"></i>
+        </a>
+    </div>
+</div>
 
 <!--    FOOTER START-->
 <div class="flex lg:hidden z-[100]  fixed bottom-5 w-full px-4 py-2 ">
@@ -196,14 +216,17 @@
 <!--script for sidebar-->
 <script>
     const sidebar = document.getElementById('sidebar');
+    const sidebar_left = document.getElementById('left-icons');
     const btnSidebar = document.getElementById('Layer');
     const overlay = document.getElementById('overlay')
     const toggleSideBar = () => {
         sidebar.classList.toggle('open'); // اضافه کردن یا حذف کردن کلاس open
+        sidebar_left.classList.toggle('open'); // اضافه کردن یا حذف کردن کلاس open
         overlay.classList.toggle('hidden')
     }
     overlay.addEventListener('click' , () => {
         sidebar.classList.remove('open')
+        sidebar_left.classList.remove('open')
         overlay.classList.add('hidden')
     })
 

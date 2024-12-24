@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
@@ -61,3 +63,35 @@ body:not(i){
 .sidebar.open {
     right: 0; /* سایدبار در حالت باز */
 }
+.sidebar-left {
+    left: -100%; /* سایدبار در حالت بسته */
+    transition: right 0.3s ease; /* ترنزیشن برای تغییر موقعیت */
+}
+
+.sidebar-left.open {
+    left: 0; /* سایدبار در حالت باز */
+}
+
+@font-face {
+    font-family: 'parsfont';
+    src: url('../assets/fonts/pars-font.ttf');
+    /*src: url('../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.eot?7vaoat#iefix') format('embedded-opentype'),url(../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.ttf?7vaoat) format('truetype'),url(../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.woff?7vaoat) format('woff'),url('../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.svg?7vaoat#pars-font') format('svg');*/
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+[class^="prk-"],[class*=" prk-"] {
+    font-family: 'parsfont' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+/*.prk-eitaa:before {*/
+/*    content: "\f011";*/
+/*}*/

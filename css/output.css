@@ -600,16 +600,24 @@ video {
   inset: 0px;
 }
 
-.-right-full {
-  right: -100%;
-}
-
 .bottom-5 {
   bottom: 1.25rem;
 }
 
+.bottom-\[220px\] {
+  bottom: 220px;
+}
+
 .top-\[14\%\] {
   top: 14%;
+}
+
+.bottom-\[240px\] {
+  bottom: 240px;
+}
+
+.bottom-\[260px\] {
+  bottom: 260px;
 }
 
 .z-\[100\] {
@@ -637,6 +645,14 @@ video {
   display: none;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
+.h-\[10vh\] {
+  height: 10vh;
+}
+
 .h-\[70vh\] {
   height: 70vh;
 }
@@ -653,8 +669,16 @@ video {
   min-height: 100vh;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.min-w-\[10\%\] {
+  min-width: 10%;
 }
 
 .min-w-\[30\%\] {
@@ -675,6 +699,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -698,6 +726,18 @@ video {
   row-gap: 0.5rem;
 }
 
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.gap-y-5 {
+  row-gap: 1.25rem;
+}
+
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -710,6 +750,10 @@ video {
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-xl {
@@ -725,6 +769,10 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
+.bg-black\/30 {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
@@ -733,10 +781,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black\/30 {
-  background-color: rgb(0 0 0 / 0.3);
 }
 
 .px-2 {
@@ -769,6 +813,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -790,6 +844,16 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
@@ -803,6 +867,26 @@ video {
 .text-zinc-700 {
   --tw-text-opacity: 1;
   color: rgb(63 63 70 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-rose-800 {
+  --tw-text-opacity: 1;
+  color: rgb(159 18 57 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-900 {
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-950 {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84 / var(--tw-text-opacity, 1));
 }
 
 .shadow-md {
@@ -900,6 +984,50 @@ body:not(i){
   right: 0;
   /* سایدبار در حالت باز */
 }
+
+.sidebar-left {
+  left: -100%;
+  /* سایدبار در حالت بسته */
+  transition: right 0.3s ease;
+  /* ترنزیشن برای تغییر موقعیت */
+}
+
+.sidebar-left.open {
+  left: 0;
+  /* سایدبار در حالت باز */
+}
+
+@font-face {
+  font-family: 'parsfont';
+
+  src: url('../assets/fonts/pars-font.ttf');
+
+  /*src: url('../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.eot?7vaoat#iefix') format('embedded-opentype'),url(../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.ttf?7vaoat) format('truetype'),url(../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.woff?7vaoat) format('woff'),url('../../../../../../../../../themes/parskala/assets/fonts/parsfont/fonts/pars-font.svg?7vaoat#pars-font') format('svg');*/
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap
+}
+
+[class^="prk-"],[class*=" prk-"] {
+  font-family: 'parsfont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+/*.prk-eitaa:before {*/
+
+/*    content: "\f011";*/
+
+/*}*/
 
 .hover\:bg-zinc-50:hover {
   --tw-bg-opacity: 1;
